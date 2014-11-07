@@ -43,5 +43,35 @@ namespace ExampleF14
         {
 
         }
+
+        private void btnPhysicians_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form3 frmC = new Form3();
+
+                frmC.ShowDialog(this);
+                frmC.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in Main Form - " + ex.Message);
+            }
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form4 frmC = new Form4();
+
+                frmC.ShowDialog(this);
+                frmC.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in Main Form - " + ex.Message);
+            }
+        }
     }
 }
