@@ -70,6 +70,27 @@ CREATE TABLE TREATMENT (
 )
 GO*/
 
+/*new possible treatment table (with treatment_detail
+CREATE TABLE TREATMENT (
+	TreatmentID bigint IDENTITY PRIMARY KEY,
+	PatientID bigint NOT NULL ,
+	TreatmentName varchar (100) NOT NULL,
+	TreatmentDosage int, /*can be null if not a medicine*/
+	DateTreated datetime NOT NULL , /*or prescribed*/
+	
+    FOREIGN KEY (PatientID) REFERENCES PATIENT(PatientID)
+)
+GO
+
+CREATE TABLE TREATMENT_DETAIL (
+	TreatmentID bigint NOT NULL REFERENCES TREATMENT(TreatmentID),
+	PhysicianID bigint NOT NULL REFERENCES PHYSICIAN(PhysicianID),
+/*orderdetail has a date here. not sure how to cope. */
+	PRIMARY KEY (TreatmentID, PhysicianID)
+)
+GO
+*/
+
 CREATE TABLE MEDICATION (
 	PhysicianID bigint NOT NULL REFERENCES PHYSICIAN(PhysicianID),
 	PatientID bigint NOT NULL REFERENCES PATIENT(PatientID),
