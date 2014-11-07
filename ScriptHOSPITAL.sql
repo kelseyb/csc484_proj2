@@ -8,8 +8,14 @@ if exists (select * from sysobjects where id = object_id('PATIENT'))
   drop table PATIENT
 if exists (select * from sysobjects where id = object_id('PHYSICIAN'))
   drop table PHYSICIAN
-if exists (select * from sysobjects where id = object_id('TREATMENT'))
-  drop table TREATMENT
+/*if exists (select * from sysobjects where id = object_id('TREATMENT'))
+  drop table TREATMENT*/
+if exists (select * from sysobjects where id = object_id('MEDICATION'))
+  drop table MEDICATION
+if exists (select * from sysobjects where id = object_id('LABS'))
+  drop table LABS
+if exists (select * from sysobjects where id = object_id('SPECIAL_DIET'))
+  drop table SPECIAL_DIET
   
   /*possibly treatment and treatment details? hmmm*/
 GO
@@ -40,8 +46,8 @@ GO
 CREATE TABLE PHYSICIAN (
 	PhysicianID bigint NOT NULL PRIMARY KEY,
 	PhysicianName varchar (100) NOT NULL,
-	Specialization varchar (100) NOT NULL
-	
+	Specialization varchar (100) NOT NULL,
+	Salary bigint NOT NULL
 	
 	/* what else?
 	salary?
@@ -54,10 +60,41 @@ GO
 /*may have to split this up- wants medication, dosage, 
 lab esams done and special diets
 */
+/*
 CREATE TABLE TREATMENT (
 	PhysicianID bigint NOT NULL REFERENCES PHYSICIAN(PhysicianID),
 	PatientID bigint NOT NULL REFERENCES PATIENT(PatientID),
 	SpecialDiet varchar (100) NOT NULL,
+	
+	PRIMARY KEY (PhysicianID, PatientID)
+)
+GO*/
+
+CREATE TABLE MEDICATION (
+	PhysicianID bigint NOT NULL REFERENCES PHYSICIAN(PhysicianID),
+	PatientID bigint NOT NULL REFERENCES PATIENT(PatientID),
+	MedicationName varchar (100) NOT NULL,
+	Dosage int NOT NULL,
+	
+	PRIMARY KEY (PhysicianID, PatientID)
+)
+GO
+
+CREATE TABLE LABS (
+	PhysicianID bigint NOT NULL REFERENCES PHYSICIAN(PhysicianID),
+	PatientID bigint NOT NULL REFERENCES PATIENT(PatientID),
+	TreatmentID bigint NOT NULL,
+	LabName varchar (100) NOT NULL,
+	DateLabDone datetime NOT NULL,
+	
+	PRIMARY KEY (PhysicianID, PatientID)
+)
+GO
+
+CREATE TABLE SPECIAL_DIET (
+	PhysicianID bigint NOT NULL REFERENCES PHYSICIAN(PhysicianID),
+	PatientID bigint NOT NULL REFERENCES PATIENT(PatientID),
+	DietName varchar (100) NOT NULL,
 	
 	PRIMARY KEY (PhysicianID, PatientID)
 )
@@ -114,10 +151,16 @@ INSERT INTO PATIENT
    VALUES(1, 'Name 1', 1112222, 'Emergency Contact 1', '10-Dec-2003', 1);
    
 INSERT INTO PHYSICIAN
-   VALUES(1, 'Doctor 1', 'specialization 1');
+   VALUES(1, 'Doctor 1', 'specialization 1', 100000);
    
-INSERT INTO TREATMENT
-   VALUES(1, 1, 'only greens');
+INSERT INTO MEDICATION
+   VALUES(1, 1, 'DOXYCYCLIN', 2);
+   
+INSERT INTO SPECIAL_DIET
+	VALUES(1, 1, 'diabetic');
+	
+INSERT INTO LABS
+	VALUES(1, 1, 'X-RAY', '11-Dec-2003'
 
 /*INSERT INTO CUSTOMER
    VALUES(120, 'Name 1', 2200, 0, '10-Dec-2003');
