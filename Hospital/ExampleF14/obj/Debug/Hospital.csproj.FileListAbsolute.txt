@@ -9,3 +9,4 @@ C:\Users\7032956\Documents\GitHub\csc484_proj2\Hospital\ExampleF14\obj\Debug\Exa
 C:\Users\7032956\Documents\GitHub\csc484_proj2\Hospital\ExampleF14\obj\Debug\ExampleF14.Form3.resources
 C:\Users\7032956\Documents\GitHub\csc484_proj2\Hospital\ExampleF14\obj\Debug\ExampleF14.Properties.Resources.resources
 C:\Users\7032956\Documents\GitHub\csc484_proj2\Hospital\ExampleF14\obj\Debug\Hospital.csproj.GenerateResource.Cache
+C:\Users\7032956\Documents\GitHub\csc484_proj2\Hospital\ExampleF14\obj\Debug\ExampleF14.Form4.resources
