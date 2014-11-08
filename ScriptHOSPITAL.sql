@@ -18,6 +18,7 @@ CREATE TABLE PHYSICIAN (
 	PhysicianName varchar (100) NOT NULL,
 	Specialization varchar (100) NOT NULL,
 	Salary bigint NOT NULL
+
 )
 GO
  
@@ -28,10 +29,7 @@ CREATE TABLE PATIENT (
 	PhoneNumber bigint NOT NULL,
 	EmergencyContact varchar (100) NOT NULL,
 	AdmittedDate datetime NOT NULL,
-	
-	PhysicianID bigint NOT NULL REFERENCES PHYSICIAN(PhysicianID)
 
-	--FOREIGN KEY (PhysicianID) REFERENCES PHYSICIAN(PhysicianID)
 )
 GO
 
