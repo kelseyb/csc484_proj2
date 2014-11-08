@@ -16,5 +16,20 @@ namespace ExampleF14
         {
             InitializeComponent();
         }
+
+        private void pATIENTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.pATIENTBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.s7032956DataSet);
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 's7032956DataSet.PATIENT' table. You can move, or remove it, as needed.
+            this.pATIENTTableAdapter.Fill(this.s7032956DataSet.PATIENT);
+
+        }
     }
 }
