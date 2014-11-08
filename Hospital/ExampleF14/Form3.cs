@@ -21,5 +21,20 @@ namespace ExampleF14
         {
 
         }
+
+        private void pHYSICIANBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.pHYSICIANBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.s7032956DataSet);
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 's7032956DataSet.PHYSICIAN' table. You can move, or remove it, as needed.
+            this.pHYSICIANTableAdapter.Fill(this.s7032956DataSet.PHYSICIAN);
+
+        }
     }
 }

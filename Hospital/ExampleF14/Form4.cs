@@ -16,5 +16,20 @@ namespace ExampleF14
         {
             InitializeComponent();
         }
+
+        private void tREATMENTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tREATMENTBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.s7032956DataSet);
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 's7032956DataSet.TREATMENT' table. You can move, or remove it, as needed.
+            this.tREATMENTTableAdapter.Fill(this.s7032956DataSet.TREATMENT);
+
+        }
     }
 }
