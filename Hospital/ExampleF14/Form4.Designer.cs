@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.s7032956DataSet = new ExampleF14.s7032956DataSet();
@@ -261,7 +260,6 @@
             this.dataGridViewTextBoxColumn6.DataPropertyName = "TreatmentDosage";
             this.dataGridViewTextBoxColumn6.HeaderText = "TreatmentDosage";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-=======
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPatient = new System.Windows.Forms.TextBox();
@@ -340,13 +338,11 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
->>>>>>> origin/master
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(674, 325);
             this.Controls.Add(this.tREATMENTDataGridView);
             this.Controls.Add(this.tREATMENTBindingNavigator);
@@ -359,7 +355,6 @@
             this.tREATMENTBindingNavigator.ResumeLayout(false);
             this.tREATMENTBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tREATMENTDataGridView)).EndInit();
-=======
             this.ClientSize = new System.Drawing.Size(508, 262);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtDosage);
@@ -371,7 +366,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Form4";
             this.Text = "Treatments";
->>>>>>> origin/master
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,7 +373,7 @@
 
         #endregion
 
-<<<<<<< HEAD
+
         private s7032956DataSet s7032956DataSet;
         private System.Windows.Forms.BindingSource tREATMENTBindingSource;
         private s7032956DataSetTableAdapters.TREATMENTTableAdapter tREATMENTTableAdapter;
@@ -404,7 +398,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-=======
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPatient;
@@ -413,6 +406,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDosage;
         private System.Windows.Forms.Button btnExit;
->>>>>>> origin/master
     }
 }
