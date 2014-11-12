@@ -112,5 +112,15 @@ Convert.ToInt32(qtyInStock.ToString()) - Convert.ToInt32(txtQuantity.Text);
         {
             this.Close();
         }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.tREATMENTTableAdapter.Update(this.s7032956DataSet.TREATMENT); 
+        }
     }
 }

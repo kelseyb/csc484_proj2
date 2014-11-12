@@ -47,6 +47,12 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.pATIENTBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cboPhysician = new System.Windows.Forms.ComboBox();
+            this.pHYSICIANIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pHYSICIANIDTableAdapter = new ExampleF14.s7032956DataSetTableAdapters.PHYSICIANIDTableAdapter();
+            this.pATIENTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pATIENTDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,11 +60,14 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.s7032956DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingNavigator)).BeginInit();
             this.pATIENTBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pHYSICIANIDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +89,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.PATIENTTableAdapter = this.pATIENTTableAdapter;
+            this.tableAdapterManager.PHYSICIANIDTableAdapter = null;
             this.tableAdapterManager.PHYSICIANTableAdapter = null;
             this.tableAdapterManager.TREATMENTTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ExampleF14.s7032956DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -208,6 +218,50 @@
             this.pATIENTBindingNavigatorSaveItem.Text = "Save Data";
             this.pATIENTBindingNavigatorSaveItem.Click += new System.EventHandler(this.pATIENTBindingNavigatorSaveItem_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(293, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Patients";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(186, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Physician ID:";
+            // 
+            // cboPhysician
+            // 
+            this.cboPhysician.DataSource = this.pHYSICIANIDBindingSource;
+            this.cboPhysician.DisplayMember = "PhysicianID";
+            this.cboPhysician.FormattingEnabled = true;
+            this.cboPhysician.Location = new System.Drawing.Point(261, 53);
+            this.cboPhysician.Name = "cboPhysician";
+            this.cboPhysician.Size = new System.Drawing.Size(224, 21);
+            this.cboPhysician.TabIndex = 4;
+            this.cboPhysician.ValueMember = "PhysicianID";
+            // 
+            // pHYSICIANIDBindingSource
+            // 
+            this.pHYSICIANIDBindingSource.DataMember = "PHYSICIANID";
+            this.pHYSICIANIDBindingSource.DataSource = this.s7032956DataSet;
+            // 
+            // pHYSICIANIDTableAdapter
+            // 
+            this.pHYSICIANIDTableAdapter.ClearBeforeFill = true;
+            // 
+            // pATIENTBindingSource1
+            // 
+            this.pATIENTBindingSource1.DataMember = "FK__PATIENT__Physici__382F56611";
+            this.pATIENTBindingSource1.DataSource = this.pHYSICIANIDBindingSource;
+            // 
             // pATIENTDataGridView
             // 
             this.pATIENTDataGridView.AutoGenerateColumns = false;
@@ -219,11 +273,11 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            this.pATIENTDataGridView.DataSource = this.pATIENTBindingSource;
-            this.pATIENTDataGridView.Location = new System.Drawing.Point(12, 53);
+            this.pATIENTDataGridView.DataSource = this.pATIENTBindingSource1;
+            this.pATIENTDataGridView.Location = new System.Drawing.Point(12, 80);
             this.pATIENTDataGridView.Name = "pATIENTDataGridView";
-            this.pATIENTDataGridView.Size = new System.Drawing.Size(657, 244);
-            this.pATIENTDataGridView.TabIndex = 1;
+            this.pATIENTDataGridView.Size = new System.Drawing.Size(657, 220);
+            this.pATIENTDataGridView.TabIndex = 4;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -261,23 +315,37 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "PhysicianID";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // label1
+            // button3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(293, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Patients";
+            this.button3.Location = new System.Drawing.Point(593, 306);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Exit";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(512, 306);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Select";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 309);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(681, 341);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pATIENTDataGridView);
+            this.Controls.Add(this.cboPhysician);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pATIENTBindingNavigator);
             this.Name = "Form2";
             this.Text = "Patients";
@@ -287,6 +355,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingNavigator)).EndInit();
             this.pATIENTBindingNavigator.ResumeLayout(false);
             this.pATIENTBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pHYSICIANIDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pATIENTBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -312,6 +382,12 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton pATIENTBindingNavigatorSaveItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cboPhysician;
+        private System.Windows.Forms.BindingSource pHYSICIANIDBindingSource;
+        private s7032956DataSetTableAdapters.PHYSICIANIDTableAdapter pHYSICIANIDTableAdapter;
+        private System.Windows.Forms.BindingSource pATIENTBindingSource1;
         private System.Windows.Forms.DataGridView pATIENTDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -319,6 +395,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }

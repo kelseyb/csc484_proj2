@@ -56,13 +56,12 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPatient = new System.Windows.Forms.TextBox();
-            this.txtPhysician = new System.Windows.Forms.TextBox();
-            this.btnApply = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDosage = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.exit = new System.Windows.Forms.Button();
+            this.txtPatient = new System.Windows.Forms.ComboBox();
+            this.txtPhysician = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.s7032956DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tREATMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tREATMENTBindingNavigator)).BeginInit();
@@ -88,6 +87,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.PATIENTTableAdapter = null;
+            this.tableAdapterManager.PHYSICIANIDTableAdapter = null;
             this.tableAdapterManager.PHYSICIANTableAdapter = null;
             this.tableAdapterManager.TREATMENTTableAdapter = this.tREATMENTTableAdapter;
             this.tableAdapterManager.UpdateOrder = ExampleF14.s7032956DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -273,61 +273,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 57);
+            this.label1.Location = new System.Drawing.Point(12, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Patient";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(176, 60);
+            this.label2.Location = new System.Drawing.Point(185, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Physician";
-            // 
-            // txtPatient
-            // 
-            this.txtPatient.Location = new System.Drawing.Point(55, 57);
-            this.txtPatient.Name = "txtPatient";
-            this.txtPatient.Size = new System.Drawing.Size(100, 20);
-            this.txtPatient.TabIndex = 2;
-            // 
-            // txtPhysician
-            // 
-            this.txtPhysician.Location = new System.Drawing.Point(234, 57);
-            this.txtPhysician.Name = "txtPhysician";
-            this.txtPhysician.Size = new System.Drawing.Size(100, 20);
-            this.txtPhysician.TabIndex = 3;
-            // 
-            // btnApply
-            // 
-            this.btnApply.Location = new System.Drawing.Point(572, 47);
-            this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(75, 23);
-            this.btnApply.TabIndex = 4;
-            this.btnApply.Text = "Apply";
-            this.btnApply.UseVisualStyleBackColor = true;
-            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(356, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Dosage";
-            // 
-            // txtDosage
-            // 
-            this.txtDosage.Location = new System.Drawing.Point(406, 54);
-            this.txtDosage.Name = "txtDosage";
-            this.txtDosage.Size = new System.Drawing.Size(100, 20);
-            this.txtDosage.TabIndex = 6;
             // 
             // btnExit
             // 
@@ -349,20 +308,59 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Treatments";
             // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(584, 307);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(75, 23);
+            this.exit.TabIndex = 9;
+            this.exit.Text = "Exit";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // txtPatient
+            // 
+            this.txtPatient.DataSource = this.tREATMENTBindingSource;
+            this.txtPatient.DisplayMember = "PatientID";
+            this.txtPatient.FormattingEnabled = true;
+            this.txtPatient.Location = new System.Drawing.Point(58, 56);
+            this.txtPatient.Name = "txtPatient";
+            this.txtPatient.Size = new System.Drawing.Size(121, 21);
+            this.txtPatient.TabIndex = 10;
+            // 
+            // txtPhysician
+            // 
+            this.txtPhysician.DataSource = this.tREATMENTBindingSource;
+            this.txtPhysician.DisplayMember = "PhysicianID";
+            this.txtPhysician.FormattingEnabled = true;
+            this.txtPhysician.Location = new System.Drawing.Point(243, 56);
+            this.txtPhysician.Name = "txtPhysician";
+            this.txtPhysician.Size = new System.Drawing.Size(121, 21);
+            this.txtPhysician.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(371, 53);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Apply";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 313);
+            this.ClientSize = new System.Drawing.Size(669, 342);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtPhysician);
+            this.Controls.Add(this.txtPatient);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tREATMENTDataGridView);
             this.Controls.Add(this.tREATMENTBindingNavigator);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.txtDosage);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnApply);
-            this.Controls.Add(this.txtPhysician);
-            this.Controls.Add(this.txtPatient);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form4";
@@ -399,7 +397,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton tREATMENTBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView tREATMENTDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -408,12 +405,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPatient;
-        private System.Windows.Forms.TextBox txtPhysician;
-        private System.Windows.Forms.Button btnApply;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDosage;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button exit;
+        public System.Windows.Forms.DataGridView tREATMENTDataGridView;
+        public System.Windows.Forms.ComboBox txtPatient;
+        public System.Windows.Forms.ComboBox txtPhysician;
+        private System.Windows.Forms.Button button1;
     }
 }
