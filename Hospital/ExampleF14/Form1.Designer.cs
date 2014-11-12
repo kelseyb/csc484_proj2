@@ -31,7 +31,6 @@
             this.btnPatients = new System.Windows.Forms.Button();
             this.btnPhysicians = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
-            this.btnProducts = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -60,26 +59,17 @@
             // 
             this.btnDetails.Location = new System.Drawing.Point(83, 130);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(172, 23);
+            this.btnDetails.Size = new System.Drawing.Size(107, 23);
             this.btnDetails.TabIndex = 2;
-            this.btnDetails.Text = "Treatments maybe?";
+            this.btnDetails.Text = "Treatments";
             this.btnDetails.UseVisualStyleBackColor = true;
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
-            // btnProducts
-            // 
-            this.btnProducts.Location = new System.Drawing.Point(83, 172);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(107, 23);
-            this.btnProducts.TabIndex = 3;
-            this.btnProducts.Text = "dunno";
-            this.btnProducts.UseVisualStyleBackColor = true;
-            // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(204, 213);
+            this.btnExit.Location = new System.Drawing.Point(83, 171);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(51, 21);
+            this.btnExit.Size = new System.Drawing.Size(107, 21);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -94,16 +84,14 @@
             this.label1.Size = new System.Drawing.Size(158, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Hospital Database";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(278, 208);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnProducts);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.btnPhysicians);
             this.Controls.Add(this.btnPatients);
@@ -119,7 +107,6 @@
         private System.Windows.Forms.Button btnPatients;
         private System.Windows.Forms.Button btnPhysicians;
         private System.Windows.Forms.Button btnDetails;
-        private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
     }

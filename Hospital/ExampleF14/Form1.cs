@@ -39,11 +39,6 @@ namespace ExampleF14
             this.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnPhysicians_Click(object sender, EventArgs e)
         {
             try

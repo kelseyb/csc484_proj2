@@ -35,17 +35,17 @@
             this.tREATMENTTableAdapter = new ExampleF14.s7032956DataSetTableAdapters.TREATMENTTableAdapter();
             this.tableAdapterManager = new ExampleF14.s7032956DataSetTableAdapters.TableAdapterManager();
             this.tREATMENTBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.tREATMENTBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.tREATMENTDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +54,15 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPatient = new System.Windows.Forms.TextBox();
+            this.txtPhysician = new System.Windows.Forms.TextBox();
+            this.btnApply = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDosage = new System.Windows.Forms.TextBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.s7032956DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tREATMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tREATMENTBindingNavigator)).BeginInit();
@@ -109,9 +118,34 @@
             this.tREATMENTBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.tREATMENTBindingNavigator.Name = "tREATMENTBindingNavigator";
             this.tREATMENTBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tREATMENTBindingNavigator.Size = new System.Drawing.Size(674, 25);
+            this.tREATMENTBindingNavigator.Size = new System.Drawing.Size(669, 25);
             this.tREATMENTBindingNavigator.TabIndex = 0;
             this.tREATMENTBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -145,17 +179,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -163,7 +190,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -172,38 +199,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // tREATMENTBindingNavigatorSaveItem
             // 
             this.tREATMENTBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tREATMENTBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tREATMENTBindingNavigatorSaveItem.Image")));
             this.tREATMENTBindingNavigatorSaveItem.Name = "tREATMENTBindingNavigatorSaveItem";
-            this.tREATMENTBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.tREATMENTBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.tREATMENTBindingNavigatorSaveItem.Text = "Save Data";
             this.tREATMENTBindingNavigatorSaveItem.Click += new System.EventHandler(this.tREATMENTBindingNavigatorSaveItem_Click);
             // 
@@ -219,7 +228,7 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.tREATMENTDataGridView.DataSource = this.tREATMENTBindingSource;
-            this.tREATMENTDataGridView.Location = new System.Drawing.Point(12, 75);
+            this.tREATMENTDataGridView.Location = new System.Drawing.Point(12, 83);
             this.tREATMENTDataGridView.Name = "tREATMENTDataGridView";
             this.tREATMENTDataGridView.Size = new System.Drawing.Size(648, 220);
             this.tREATMENTDataGridView.TabIndex = 1;
@@ -260,20 +269,11 @@
             this.dataGridViewTextBoxColumn6.DataPropertyName = "TreatmentDosage";
             this.dataGridViewTextBoxColumn6.HeaderText = "TreatmentDosage";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPatient = new System.Windows.Forms.TextBox();
-            this.txtPhysician = new System.Windows.Forms.TextBox();
-            this.btnApply = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDosage = new System.Windows.Forms.TextBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 34);
+            this.label1.Location = new System.Drawing.Point(9, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 0;
@@ -283,7 +283,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(223, 34);
+            this.label2.Location = new System.Drawing.Point(176, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -291,21 +291,21 @@
             // 
             // txtPatient
             // 
-            this.txtPatient.Location = new System.Drawing.Point(68, 34);
+            this.txtPatient.Location = new System.Drawing.Point(55, 57);
             this.txtPatient.Name = "txtPatient";
             this.txtPatient.Size = new System.Drawing.Size(100, 20);
             this.txtPatient.TabIndex = 2;
             // 
             // txtPhysician
             // 
-            this.txtPhysician.Location = new System.Drawing.Point(273, 34);
+            this.txtPhysician.Location = new System.Drawing.Point(234, 57);
             this.txtPhysician.Name = "txtPhysician";
             this.txtPhysician.Size = new System.Drawing.Size(100, 20);
             this.txtPhysician.TabIndex = 3;
             // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(422, 34);
+            this.btnApply.Location = new System.Drawing.Point(572, 47);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(75, 23);
             this.btnApply.TabIndex = 4;
@@ -316,7 +316,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(223, 66);
+            this.label3.Location = new System.Drawing.Point(356, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 5;
@@ -324,7 +324,7 @@
             // 
             // txtDosage
             // 
-            this.txtDosage.Location = new System.Drawing.Point(273, 63);
+            this.txtDosage.Location = new System.Drawing.Point(406, 54);
             this.txtDosage.Name = "txtDosage";
             this.txtDosage.Size = new System.Drawing.Size(100, 20);
             this.txtDosage.TabIndex = 6;
@@ -339,23 +339,24 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(266, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 24);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Treatments";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 325);
+            this.ClientSize = new System.Drawing.Size(669, 313);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tREATMENTDataGridView);
             this.Controls.Add(this.tREATMENTBindingNavigator);
-            this.Name = "Form4";
-            this.Text = "Treatment";
-            this.Load += new System.EventHandler(this.Form4_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.s7032956DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tREATMENTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tREATMENTBindingNavigator)).EndInit();
-            this.tREATMENTBindingNavigator.ResumeLayout(false);
-            this.tREATMENTBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tREATMENTDataGridView)).EndInit();
-            this.ClientSize = new System.Drawing.Size(508, 262);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtDosage);
             this.Controls.Add(this.label3);
@@ -366,6 +367,13 @@
             this.Controls.Add(this.label1);
             this.Name = "Form4";
             this.Text = "Treatments";
+            this.Load += new System.EventHandler(this.Form4_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.s7032956DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tREATMENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tREATMENTBindingNavigator)).EndInit();
+            this.tREATMENTBindingNavigator.ResumeLayout(false);
+            this.tREATMENTBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tREATMENTDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,5 +414,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDosage;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label4;
     }
 }
