@@ -36,16 +36,20 @@ namespace ExampleF14
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //close Form 2. 
             this.Close(); 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Get the patient number of the selected row. 
             object patientNum = pATIENTDataGridView.CurrentRow.Cells[0].Value;
             Form4 frmTreatment = new Form4();
 
             try
             {
+                //fill in the Patient text box with the patient number from this file. 
+                //show the form. 
                 frmTreatment.txtPatient.Text = patientNum.ToString();
                 frmTreatment.button1.PerformClick(); 
                 frmTreatment.ShowDialog(this);

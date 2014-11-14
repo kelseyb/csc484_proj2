@@ -17,11 +17,6 @@ namespace ExampleF14
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pHYSICIANBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();

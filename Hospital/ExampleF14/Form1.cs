@@ -17,11 +17,11 @@ namespace ExampleF14
             InitializeComponent();
         }
 
-        //shouldn't you be btnPatients??
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
+                //go to the patient form
                 Form2 frmC = new Form2();
 
                 frmC.ShowDialog(this);
@@ -36,13 +36,15 @@ namespace ExampleF14
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            //close this form
             this.Close();
         }
-
+        
         private void btnPhysicians_Click(object sender, EventArgs e)
         {
             try
             {
+                //go to the physicians form 
                 Form3 frmC = new Form3();
 
                 frmC.ShowDialog(this);
@@ -58,6 +60,7 @@ namespace ExampleF14
         {
             try
             {
+                //go to the treatments form. 
                 Form4 frmC = new Form4();
 
                 frmC.ShowDialog(this);
