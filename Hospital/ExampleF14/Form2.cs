@@ -42,13 +42,12 @@ namespace ExampleF14
         private void button1_Click(object sender, EventArgs e)
         {
             object patientNum = pATIENTDataGridView.CurrentRow.Cells[0].Value;
-            object physicianNum = pATIENTDataGridView.CurrentRow.Cells[5].Value;
             Form4 frmTreatment = new Form4();
 
             try
             {
                 frmTreatment.txtPatient.Text = patientNum.ToString();
-                frmTreatment.txtPhysician.Text = physicianNum.ToString();
+                frmTreatment.button1.PerformClick(); 
                 frmTreatment.ShowDialog(this);
                 frmTreatment.Dispose();
             }
