@@ -33,11 +33,12 @@
             this.btnDetails = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPatients
             // 
-            this.btnPatients.Location = new System.Drawing.Point(83, 48);
+            this.btnPatients.Location = new System.Drawing.Point(60, 44);
             this.btnPatients.Name = "btnPatients";
             this.btnPatients.Size = new System.Drawing.Size(107, 23);
             this.btnPatients.TabIndex = 0;
@@ -47,7 +48,7 @@
             // 
             // btnPhysicians
             // 
-            this.btnPhysicians.Location = new System.Drawing.Point(83, 88);
+            this.btnPhysicians.Location = new System.Drawing.Point(60, 85);
             this.btnPhysicians.Name = "btnPhysicians";
             this.btnPhysicians.Size = new System.Drawing.Size(107, 23);
             this.btnPhysicians.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             // btnDetails
             // 
-            this.btnDetails.Location = new System.Drawing.Point(83, 130);
+            this.btnDetails.Location = new System.Drawing.Point(60, 129);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(107, 23);
             this.btnDetails.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(83, 171);
+            this.btnExit.Location = new System.Drawing.Point(60, 214);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(107, 21);
             this.btnExit.TabIndex = 4;
@@ -79,17 +80,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 9);
+            this.label1.Location = new System.Drawing.Point(32, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Hospital Database";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(60, 172);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Add Treatment";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 208);
+            this.ClientSize = new System.Drawing.Size(229, 247);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDetails);
@@ -109,6 +121,7 @@
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

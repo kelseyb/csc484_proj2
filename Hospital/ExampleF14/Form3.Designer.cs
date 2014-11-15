@@ -48,11 +48,11 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.pHYSICIANBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.pHYSICIANDataGridView = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.s7032956DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHYSICIANBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHYSICIANBindingNavigator)).BeginInit();
@@ -78,6 +78,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.PATIENTTableAdapter = null;
+            this.tableAdapterManager.PHYSICIANIDTableAdapter = null;
             this.tableAdapterManager.PHYSICIANTableAdapter = this.pHYSICIANTableAdapter;
             this.tableAdapterManager.TREATMENTTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ExampleF14.s7032956DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -218,19 +219,29 @@
             this.pHYSICIANDataGridView.DataSource = this.pHYSICIANBindingSource;
             this.pHYSICIANDataGridView.Location = new System.Drawing.Point(12, 53);
             this.pHYSICIANDataGridView.Name = "pHYSICIANDataGridView";
-            this.pHYSICIANDataGridView.Size = new System.Drawing.Size(449, 220);
+            this.pHYSICIANDataGridView.Size = new System.Drawing.Size(450, 220);
             this.pHYSICIANDataGridView.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(194, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Physicians";
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "PhysicianID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "PhysicianID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Physician ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "PhysicianName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "PhysicianName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Physician Name";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
@@ -244,16 +255,6 @@
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Salary";
             this.dataGridViewTextBoxColumn4.HeaderText = "Salary";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(194, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Physicians";
             // 
             // Form3
             // 
@@ -297,11 +298,11 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton pHYSICIANBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView pHYSICIANDataGridView;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.Label label1;
 
     }
 }

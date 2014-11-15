@@ -71,5 +71,21 @@ namespace ExampleF14
                 MessageBox.Show("Error in Main Form - " + ex.Message);
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                //go to the treatments form. 
+                Form5 frmC = new Form5();
+
+                frmC.ShowDialog(this);
+                frmC.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in Main Form - " + ex.Message);
+            }
+        }
     }
 }
